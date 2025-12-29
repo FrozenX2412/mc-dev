@@ -1,14 +1,15 @@
 :root {
   --bg: #0b0f1a;
-  --card: rgba(255,255,255,0.07);
+  --card: rgba(255,255,255,0.08);
   --text: #e5e7eb;
   --muted: #9ca3af;
   --grad: linear-gradient(135deg,#7c7cff,#38bdf8,#22c55e);
+  --btn-grad: linear-gradient(90deg,#fbc2eb,#fcb69f);
 }
 
 .light {
   --bg: #f6f7fb;
-  --card: rgba(0,0,0,0.06);
+  --card: rgba(0,0,0,0.07);
   --text: #0b0f1a;
   --muted: #4b5563;
 }
@@ -25,6 +26,7 @@ body {
   color: var(--text);
 }
 
+/* ===== NAVBAR ===== */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -40,7 +42,8 @@ nav a {
   color: var(--muted);
 }
 
-nav a.active, nav a:hover {
+nav a.active,
+nav a:hover {
   color: var(--text);
 }
 
@@ -52,105 +55,112 @@ nav a.active, nav a:hover {
   cursor: pointer;
 }
 
-.hero {
-  padding: 120px 8%;
-  position: relative;
-}
-
-.hero-text h1 span {
-  background: var(--grad);
-  -webkit-background-clip: text;
-  color: transparent;
-}
-
-.hero-glow {
-  position: absolute;
-  right: -120px;
-  top: 50px;
-  width: 400px;
-  height: 400px;
-  background: var(--grad);
-  filter: blur(140px);
-}
-
-.btn {
-  display: inline-block;
-  margin-top: 24px;
-  padding: 14px 32px;
-  border-radius: 999px;
-  background: var(--grad);
-  color: #000;
-  text-decoration: none;
-  font-weight: 600;
-}
-
-.home-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
-  gap: 24px;
-  padding: 60px 8%;
-}
-
-.glass-card {
-  background: var(--card);
-  backdrop-filter: blur(12px);
-  padding: 24px;
-  border-radius: 24px;
-  transition: transform .3s;
-}
-
-.glass-card:hover {
-  transform: translateY(-6px);
-}
-
+/* ===== TOOLS PAGE ===== */
 .tools {
-  padding: 80px 8%;
+  padding: 70px 8%;
 }
 
+.tools h1 {
+  margin-bottom: 30px;
+}
+
+/* ===== LIVE TOOL ===== */
 .tool-live {
   background: var(--card);
-  padding: 24px;
-  border-radius: 22px;
-  margin-bottom: 40px;
+  padding: 26px;
+  border-radius: 26px;
+  margin-bottom: 50px;
+  backdrop-filter: blur(12px);
 }
 
 .tool-live input {
-  padding: 12px;
   width: 100%;
+  padding: 14px;
   margin: 12px 0;
-  border-radius: 12px;
+  border-radius: 14px;
   border: none;
 }
 
 .tool-live button {
-  padding: 10px 24px;
+  padding: 12px 30px;
   border-radius: 999px;
   border: none;
   background: var(--grad);
   cursor: pointer;
+  font-weight: 700;
 }
 
+/* ===== TOOL GRID ===== */
 .tool-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 28px;
 }
 
-.tool-card {
-  background: var(--card);
-  padding: 30px;
+/* ===== CANVA STYLE TOOL CARD ===== */
+.tool-box {
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.20),
+    rgba(255,255,255,0.08)
+  );
+  border-radius: 28px;
+  padding: 16px;
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,0.25),
+    0 20px 50px rgba(0,0,0,0.4);
+  transition: transform .25s ease, box-shadow .25s ease;
+  cursor: pointer;
+}
+
+.light .tool-box {
+  background: linear-gradient(
+    180deg,
+    rgba(0,0,0,0.10),
+    rgba(0,0,0,0.04)
+  );
+}
+
+.tool-box:hover {
+  transform: translateY(-7px) scale(1.02);
+  box-shadow:
+    inset 0 0 0 1px rgba(255,255,255,0.35),
+    0 30px 80px rgba(0,0,0,0.5);
+}
+
+.tool-box:active {
+  transform: scale(0.96);
+}
+
+/* IMAGE AREA */
+.tool-image {
+  width: 100%;
+  height: 140px;
+  background: #cfd8d6;
   border-radius: 20px;
-  text-align: center;
-  transition: transform .3s, box-shadow .3s;
+  overflow: hidden;
+  margin-bottom: 16px;
 }
 
-.tool-card:hover {
-  transform: translateY(-8px) scale(1.02);
-  box-shadow: 0 25px 80px rgba(0,0,0,.4);
+.tool-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-footer {
-  text-align: center;
-  padding: 40px;
+/* TEXT */
+.tool-title {
+  font-size: 18px;
+  font-weight: 900;
+  letter-spacing: 0.4px;
+  margin-bottom: 6px;
+}
+
+.tool-desc {
+  font-size: 14px;
   color: var(--muted);
+  line-height: 1.4;
+  margin-bottom: 14px;
 }
+
+/
