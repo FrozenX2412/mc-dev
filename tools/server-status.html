@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Server Status</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="container">
+
+<h2>Server Status</h2>
+<input id="ip" placeholder="play.example.com">
+<button class="btn" onclick="check()">Check</button>
+<pre id="out"></pre>
+
+<script>
+async function check(){
+  out.textContent="Checking...";
+  const r=await fetch(`https://api.mcsrvstat.us/3/${ip.value}`);
+  const d=await r.json();
+  out.textContent=d.online
+    ? `ONLINE\nPlayers: ${d.players.online}/${d.players.max}\nVersion: ${d.version}`
+    : "OFFLINE";
+}
+</script>
+</body>
+</html>
