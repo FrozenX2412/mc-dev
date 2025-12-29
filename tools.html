@@ -21,7 +21,7 @@
 <section class="tools">
   <h1>Tools</h1>
 
-  <!-- WORKING SERVER STATUS TOOL -->
+  <!-- LIVE SERVER STATUS -->
   <div class="tool-live">
     <h2>🟢 Server Status Checker</h2>
     <input id="serverInput" placeholder="play.example.com">
@@ -29,23 +29,56 @@
     <pre id="serverResult"></pre>
   </div>
 
+  <!-- TOOL CARDS -->
   <div class="tool-grid">
-    <!-- 15 TOOLS -->
-    <div class="tool-card">Server Status</div>
-    <div class="tool-card">MOTD Generator</div>
-    <div class="tool-card">MOTD Preview</div>
-    <div class="tool-card">JSON Validator</div>
-    <div class="tool-card">YAML Validator</div>
-    <div class="tool-card">UUID Lookup</div>
-    <div class="tool-card">Username History</div>
-    <div class="tool-card">Skin Viewer</div>
-    <div class="tool-card">Server Icon Generator</div>
-    <div class="tool-card">Color Generator</div>
-    <div class="tool-card">server.properties Editor</div>
-    <div class="tool-card">Base64 ↔ Image</div>
-    <div class="tool-card">Log Analyzer</div>
-    <div class="tool-card">RAM Estimator</div>
-    <div class="tool-card">Pterodactyl API Tester</div>
+
+    <!-- SERVER STATUS -->
+    <div class="tool-box" onclick="location.href='tools/server-status.html'">
+      <div class="tool-image">
+        <img src="assets/default.svg" alt="Server Status">
+      </div>
+      <div class="tool-title">SERVER STATUS</div>
+      <div class="tool-desc">
+        Check any Minecraft server status including players and version.
+      </div>
+      <button class="tool-btn">GO</button>
+    </div>
+
+    <div class="tool-box" onclick="location.href='tools/motd-generator.html'">
+      <div class="tool-image">
+        <img src="assets/default.svg">
+      </div>
+      <div class="tool-title">MOTD GENERATOR</div>
+      <div class="tool-desc">
+        Create colorful Minecraft MOTDs with live preview.
+      </div>
+      <button class="tool-btn">GO</button>
+    </div>
+
+    <div class="tool-box" onclick="location.href='tools/json-validator.html'">
+      <div class="tool-image">
+        <img src="assets/default.svg">
+      </div>
+      <div class="tool-title">JSON VALIDATOR</div>
+      <div class="tool-desc">
+        Validate and format JSON configuration files.
+      </div>
+      <button class="tool-btn">GO</button>
+    </div>
+
+    <div class="tool-box" onclick="location.href='tools/yaml-validator.html'">
+      <div class="tool-image">
+        <img src="assets/default.svg">
+      </div>
+      <div class="tool-title">YAML VALIDATOR</div>
+      <div class="tool-desc">
+        Fix plugin configuration errors instantly.
+      </div>
+      <button class="tool-btn">GO</button>
+    </div>
+
+    <!-- COPY SAME CARD FOR OTHER TOOLS -->
+
   </div>
 </section>
 
