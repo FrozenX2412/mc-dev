@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JSON Validator</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="container">
+
+<h2>JSON Validator</h2>
+<textarea id="j" rows="10"></textarea>
+<button class="btn" onclick="v()">Validate</button>
+<pre id="o"></pre>
+
+<script>
+function v(){
+  try{JSON.parse(j.value);o.textContent="✅ Valid JSON"}
+  catch(e){o.textContent=e.message}
+}
+</script>
+</body>
+</html>
