@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MC Tools</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="js/main.js"></script>
+</head>
+
+<body>
+<header class="navbar">
+  <div class="logo">⛏ MC<span>Tools</span></div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a class="active" href="tools.html">Tools</a>
+  </nav>
+  <button id="themeToggle">🌙</button>
+</header>
+
+<section class="tools">
+  <h1>Tools</h1>
+
+  <!-- WORKING SERVER STATUS TOOL -->
+  <div class="tool-live">
+    <h2>🟢 Server Status Checker</h2>
+    <input id="serverInput" placeholder="play.example.com">
+    <button onclick="checkServer()">Check</button>
+    <pre id="serverResult"></pre>
+  </div>
+
+  <div class="tool-grid">
+    <!-- 15 TOOLS -->
+    <div class="tool-card">Server Status</div>
+    <div class="tool-card">MOTD Generator</div>
+    <div class="tool-card">MOTD Preview</div>
+    <div class="tool-card">JSON Validator</div>
+    <div class="tool-card">YAML Validator</div>
+    <div class="tool-card">UUID Lookup</div>
+    <div class="tool-card">Username History</div>
+    <div class="tool-card">Skin Viewer</div>
+    <div class="tool-card">Server Icon Generator</div>
+    <div class="tool-card">Color Generator</div>
+    <div class="tool-card">server.properties Editor</div>
+    <div class="tool-card">Base64 ↔ Image</div>
+    <div class="tool-card">Log Analyzer</div>
+    <div class="tool-card">RAM Estimator</div>
+    <div class="tool-card">Pterodactyl API Tester</div>
+  </div>
+</section>
+
+<footer>
+  © 2025 MC Tools
+</footer>
+</body>
+</html>
